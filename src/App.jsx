@@ -5,6 +5,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import WorkExperience from './components/WorkExperience';
 import Education from './components/Education';
+import Achievements from './components/Achievements';
 import Contact from './components/Contact';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Projects />
         <WorkExperience />
         <Education />
+        <Achievements />
         <Contact />
       </main>
     </>
