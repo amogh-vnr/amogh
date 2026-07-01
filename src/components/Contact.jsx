@@ -4,14 +4,15 @@ const Contact = () => {
   return (
     <section id="contact" className="contact-section">
       <div className="contact-inner">
-        <h2 className="section-title" style={{ color: '#fff' }}>
+        <span className="section-label" style={{ justifyContent: 'center' }}>Let's Connect</span>
+        <h2 className="section-title" style={{ color: '#fff', marginBottom: '16px' }}>
           Get In <span className="highlight">Touch</span>
         </h2>
-        <p className="section-subtitle">
-          Open to internships and full-time roles in Machine Learning, AI, and Software Engineering. Let's connect!
+        <p className="section-desc">
+          Open to internships and full-time roles in Software Engineering, Machine Learning, and AI. Let's build something great together.
         </p>
         
-        <div className="contact-links">
+        <div className="contact-grid">
           <a href="mailto:amogh.vnr@gmail.com" className="contact-card">
             <h4>Email</h4>
             <p>amogh.vnr@gmail.com</p>

@@ -1,69 +1,42 @@
 import React from 'react';
 
+const allSkills = [
+  // Row 1
+  ['Python', 'Java', 'JavaScript', 'C++', 'SQL', 'TensorFlow', 'PyTorch', 'Keras', 'Deep Learning', 'Computer Vision', 'CNNs', 'ResNet50', 'CBAM', 'U-Net', 'Transfer Learning'],
+  // Row 2
+  ['React.js', 'Node.js', 'Express.js', 'FastAPI', 'REST APIs', 'JWT Auth', 'MongoDB', 'MySQL', 'Git', 'Linux', 'Postman', 'Data Structures', 'Algorithms', 'DBMS', 'Operating Systems'],
+];
+
 const Skills = () => {
   return (
     <section id="skills" className="skills-section">
-      <div className="skills-inner">
-        <div className="skills-header">
-          <div>
-            <h2 className="section-title" style={{ color: '#fff' }}>
-              Technical <span className="highlight">Skills</span>
-            </h2>
-          </div>
-          <p className="section-subtitle">
-            Comprehensive expertise across Machine Learning, Full-Stack Engineering, and Algorithmic Research.
-          </p>
+      <div className="skills-top">
+        <div>
+          <span className="section-label">What I Work With</span>
+          <h2 className="section-title" style={{ color: '#fff' }}>
+            Technical <span className="highlight">Skills</span>
+          </h2>
         </div>
-        
-        <div className="skills-grid">
-          <div className="skill-card">
-            <span className="skill-card-number">01</span>
-            <h3>Machine Learning & AI</h3>
-            <p>Building and deploying deep learning models for computer vision, NLP, and beyond. Expertise in attention mechanisms, transfer learning, and model optimization.</p>
-            <div className="skill-tags">
-              <span className="skill-tag">TensorFlow</span>
-              <span className="skill-tag">PyTorch</span>
-              <span className="skill-tag">Keras</span>
-              <span className="skill-tag">ResNet50</span>
-              <span className="skill-tag">CBAM</span>
-              <span className="skill-tag">U-Net</span>
-              <span className="skill-tag">Computer Vision</span>
-              <span className="skill-tag">CNNs</span>
-            </div>
-          </div>
-          
-          <div className="skill-card featured">
-            <span className="skill-card-number">02</span>
-            <h3>Software Engineering</h3>
-            <p>Full-stack development with modern frameworks. Building secure, scalable REST APIs, microservices, and responsive web applications end-to-end.</p>
-            <div className="skill-tags">
-              <span className="skill-tag">Python</span>
-              <span className="skill-tag">Java</span>
-              <span className="skill-tag">JavaScript</span>
-              <span className="skill-tag">React.js</span>
-              <span className="skill-tag">Node.js</span>
-              <span className="skill-tag">FastAPI</span>
-              <span className="skill-tag">MongoDB</span>
-              <span className="skill-tag">MySQL</span>
-            </div>
-          </div>
-          
-          <div className="skill-card">
-            <span className="skill-card-number">03</span>
-            <h3>Core CS & Research</h3>
-            <p>Deep foundations in algorithmic problem-solving, optimization mathematics, and experimental analysis for research-grade engineering.</p>
-            <div className="skill-tags">
-              <span className="skill-tag">DSA</span>
-              <span className="skill-tag">Algorithms</span>
-              <span className="skill-tag">DBMS</span>
-              <span className="skill-tag">Statistics</span>
-              <span className="skill-tag">Optimization</span>
-              <span className="skill-tag">OS</span>
-              <span className="skill-tag">Networks</span>
-            </div>
-          </div>
-        </div>
+        <p className="section-desc">
+          From deep learning research to full-stack web applications — a versatile toolkit built through real projects.
+        </p>
       </div>
+      
+      {allSkills.map((row, rowIndex) => (
+        <div className="marquee-row" key={rowIndex}>
+          <div className="marquee-wrapper">
+            <div className="marquee-track">
+              {/* Duplicate for seamless loop */}
+              {[...row, ...row].map((skill, i) => (
+                <span className="skill-pill" key={`${rowIndex}-${i}`}>
+                  <span className="dot"></span>
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
     </section>
   );
 };

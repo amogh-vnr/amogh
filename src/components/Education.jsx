@@ -5,6 +5,7 @@ const Education = () => {
     <section id="education" className="edu-section">
       <div className="edu-inner">
         <div className="edu-header">
+          <span className="section-label" style={{ justifyContent: 'center' }}>Academics</span>
           <h2 className="section-title">
             <span className="highlight">Education</span>
           </h2>
@@ -17,11 +18,11 @@ const Education = () => {
           </div>
           <div className="edu-details">
             <h3>VNR Vignana Jyothi Institute of Engineering and Technology</h3>
-            <div className="degree">B.Tech in Computer Science and Business Systems</div>
-            <div className="year">Hyderabad, India · 2023 — 2027</div>
-            <p className="coursework">
+            <div className="edu-degree">B.Tech in Computer Science and Business Systems</div>
+            <div className="edu-year">Hyderabad, India · 2023 — 2027</div>
+            <p className="edu-coursework">
               <strong>Relevant Coursework: </strong>
-              Data Structures & Algorithms, Design & Analysis of Algorithms, Operations Research, DBMS, Machine Learning, Probability & Statistics
+              Data Structures & Algorithms, Design & Analysis of Algorithms, Operations Research, DBMS, Machine Learning, Probability & Statistics, Object-Oriented Programming
             </p>
           </div>
         </div>
